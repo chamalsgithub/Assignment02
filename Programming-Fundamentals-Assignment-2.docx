@@ -30,8 +30,39 @@ Example (JavaScript - Case Sensitive, File System - Case Insensitive):
 
 ** Java is a case-sensitive programming language. It strictly differentiates between uppercase and lowercase characters in identifiers. For example, "myVariable" and "myvariable" are considered as two distinct identifiers in Java.
 
+	Q3 ----------------------------------------------
 
+* Identity conversion is a conversion from a type to that same type is permitted for any type.
 
+    Furthurmore,
+        1. When the type of the expression matches exactly with the target type.
+        2. When converting a reference type to a type that it directly extends or implements.
+
+    Example for  Identity Conversion with Primitive Types
+
+    public class Demo1 {
+    
+    public static void main(String[] args) {
+        int num = 12;
+        double numDouble = num; // Identity conversion from int to double
+
+        System.out.println("num: " + num);               // Output: num: 12
+        System.out.println("numDouble: " + numDouble);   // Output: numDouble: 12.0
+        }
+    }
+
+    Example for  Identity Conversion with Primitive Types
+
+    public class Demo2 {
+    public static void main(String[] args) {
+        
+        Object obj = "Hello, World!"; // String is a subclass of Object
+        String str = (String) obj;    // Identity conversion from Object to String
+
+        System.out.println("obj: " + obj);   // Output: obj: Hello, World!
+        System.out.println("str: " + str);   // Output: str: Hello, World!
+    }
+}
 
 
 
