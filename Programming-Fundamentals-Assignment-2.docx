@@ -1,6 +1,6 @@
 Assignment 2				    H.A.Chamal A. Hettiarachchi
 
-       Q1
+       Q1 --------------------------------------------
 
 1. Statically Typed Language: A statically typed language is one in which variable types are explicitly declared at compile time and checked before the program is executed. This means that the data types of variables must be known and defined at the time of writing the code. Once a variable is assigned a data type, it cannot be changed during runtime. The compiler enforces type checking to ensure that only compatible operations can be performed on variables. Examples of statically typed languages include Java, C, C++, and Swift.
 
@@ -9,9 +9,26 @@ Assignment 2				    H.A.Chamal A. Hettiarachchi
 3. Strongly Typed Language: A strongly typed language enforces strict type rules and does not allow implicit type conversions unless explicitly specified by the programmer. This means that the language is less tolerant of mixing different data types, and conversions between types must be done explicitly. The goal of strong typing is to catch type-related errors early during the development process, ensuring more robust and reliable code.
 
  4. Loosely Typed Language: On the other hand, a loosely typed language, also known as weakly typed language, is more permissive with type rules. It allows automatic type conversions or type coercion without explicit instructions from the programmer. This can sometimes lead to unexpected behavior and may require more careful handling of data types. Loosely typed languages tend to be more flexible but can be prone to subtle bugs related to type conversions.
+
+	Q2 ----------------------------------------------
+	
+1. Case Sensitive:A programming language is considered case sensitive if it differentiates between uppercase and lowercase characters in identifiers. This means that "abc" and "ABC" are treated as two distinctidentifiers. For example, if you define a variable named "myVariable" in a case-sensitive language, you cannot access its value using "myvariable" or "MYVARIABLE"; you must use "myVariable" exactly as it was defined.
+
+Ex : C, C#, C++, Java, Python, Ruby, Swift
+
+2. Case Insensitive:
+A programming language is considered case insensitive if it treats uppercase and lowercase characters in identifiers as equivalent, effectively ignoring the distinction between them. This means that "abc" and "ABC" would be considered the same identifier. So, if you define a variable named "myVariable" in a case-insensitive language, you can access its value using "myVariable," "myvariable," "MYVARIABLE," or any other combination of cases.
+
+Ex : MySQL, Pascal
+
        
+3. Case Sensitive-Insensitive (Mixed):
+In some programming languages, the treatment of identifiers may depend on the platform or the context. For example, file systems on certain operating systems might be case insensitive (e.g., Windows), while the programming language itself could be case sensitive. In such cases, the language is referred to as "Case Sensitive-Insensitive."
+
+Example (JavaScript - Case Sensitive, File System - Case Insensitive):
 
 
+** Java is a case-sensitive programming language. It strictly differentiates between uppercase and lowercase characters in identifiers. For example, "myVariable" and "myvariable" are considered as two distinct identifiers in Java.
 
 
 
