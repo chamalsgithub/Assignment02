@@ -272,6 +272,17 @@ Example (JavaScript - Case Sensitive, File System - Case Insensitive):
                 Safety and Error Prevention: Implicit narrowing conversions are generally more prone to potential loss of information than widening conversions. 
                 By restricting implicit narrowing to a limited set of types, Java aims to improve code safety and prevent potential bugs caused by unintended data loss.
 
+            Q10 ----------------------------------------------
 
+            Regarding the conversion from short to char, it is not classified as a widening or narrowing primitive conversion.
+            char represents their magnitude by 16bit and short represents their magnitude by 15 bits.
 
+            if it is occured a widening or narrowing primitive conversion, this ll'be occured as follows,
 
+            short (15bit magnitude) ------(Widening Primitive Conversion)------> it (31 bit magnitude) ------(Narrowing Primitive Conversion)------> char (16 bit magnitude)
+
+            According to above, most probably, they may result in data loss.
+
+            therefore short to char represents widening primitive conversion as follows
+
+            short (15bit magnitude) ------(Widening Primitive Conversion)------> char (16 bit magnitude)
