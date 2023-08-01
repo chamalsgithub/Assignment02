@@ -1,0 +1,20 @@
+Assignment 2				    H.A.Chamal A. Hettiarachchi
+
+       Q1
+
+1. Statically Typed Language: A statically typed language is one in which variable types are explicitly declared at compile time and checked before the program is executed. This means that the data types of variables must be known and defined at the time of writing the code. Once a variable is assigned a data type, it cannot be changed during runtime. The compiler enforces type checking to ensure that only compatible operations can be performed on variables. Examples of statically typed languages include Java, C, C++, and Swift.
+
+2. Dynamically Typed Language: In contrast, a dynamically typed language is one where variable types are determined at runtime, not at compile time. The type of a variable can change during the execution of the program, and the type checking is performed during runtime. This flexibility allows for more concise code but may lead to potential type-related errors during runtime. Examples of dynamically typed languages include Python, JavaScript, Ruby, and PHP.
+
+3. Strongly Typed Language: A strongly typed language enforces strict type rules and does not allow implicit type conversions unless explicitly specified by the programmer. This means that the language is less tolerant of mixing different data types, and conversions between types must be done explicitly. The goal of strong typing is to catch type-related errors early during the development process, ensuring more robust and reliable code.
+
+ 4. Loosely Typed Language: On the other hand, a loosely typed language, also known as weakly typed language, is more permissive with type rules. It allows automatic type conversions or type coercion without explicit instructions from the programmer. This can sometimes lead to unexpected behavior and may require more careful handling of data types. Loosely typed languages tend to be more flexible but can be prone to subtle bugs related to type conversions.
+       
+
+
+
+
+
+
+
+
