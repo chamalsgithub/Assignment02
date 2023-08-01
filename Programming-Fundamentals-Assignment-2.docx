@@ -104,4 +104,49 @@ Example (JavaScript - Case Sensitive, File System - Case Insensitive):
             }
         }
 
-        
+        Q5 ----------------------------------------------
+
+        Compile-time Constant:
+
+        A compile-time constant is a constant whose value can be determined by the Java compiler at compile time, 
+        before the program execution starts. The value of such a constant is known during the compilation phase and 
+        remains fixed throughout the program's execution. Compile-time constants are usually literals, such as numeric 
+        literals or string literals, or expressions that only contain other compile-time constants and operations that can be evaluated at compile time.
+
+        Compile-time constants are determined at compile time and are usually literals or expressions that can be evaluated at compile time. 
+        They are typically declared as final and should have fixed, known values.
+
+        Example :
+
+        public class Demo3 {
+            public static final int MAX_VALUE = 120;
+
+            public static void main(String[] args) {
+                int x = 50;
+                int y = MAX_VALUE + x; 
+
+                System.out.println("y: " + y); // Output: y: 170
+            }
+        }
+
+        Run-time Constant:
+
+        ARun-time constants are constants that have their values determined and assigned during program execution or runtime.
+         Their values may depend on user input or other runtime conditions.
+
+        Example : 
+
+        import java.util.Scanner;
+
+        public class Demo4 {
+            public static void main(String[] args) {
+                Scanner scanner = new Scanner(System.in);
+                System.out.print("Enter a value: ");
+                int userInput = scanner.nextInt();
+
+                final int MULTIPLIER = 5; // Run-time constant (value assigned during runtime)
+                int result = userInput * MULTIPLIER;
+
+                System.out.println("Result: " + result);
+            }
+        }
