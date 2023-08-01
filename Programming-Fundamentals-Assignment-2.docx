@@ -194,3 +194,32 @@ Example (JavaScript - Case Sensitive, File System - Case Insensitive):
                     
                     * The target data type should be smaller (in terms of the number of bits) than the source data type. This ensures that data loss, if any, will be limited 
                     to the least significant bits.
+
+
+            Q7 ----------------------------------------------
+
+            When it is assigned a long value to a float variable, Java will perform a widening primitive conversion followed by a narrowing primitive conversion. 
+            This is because the float type can represent a broader range of values, including fractional numbers. The process involves two steps:
+
+            Widening Conversion (Long to Float):
+            The long value is widened to a float value to allow the representation of fractional parts. 
+            This widening conversion occurs automatically without the need for explicit casting.
+
+            Narrowing Conversion (Float Precision Loss):
+            As float has limited precision compared to long, the value obtained after the widening conversion may lose some precision. 
+            The result is stored in the float variable.
+
+            Due to the potential loss of precision in the float type, it is generally not recommended to perform this type of conversion when high precision is required, 
+            such as in financial calculations or when dealing with large integer values.
+
+            Example :
+
+            public class LongToFloatExample {
+                public static void main(String[] args) {
+                    long myLongValue = 9223372036854775807L; // Maximum value for long (64 bits)
+                    float myFloatValue = myLongValue; // Implicit conversion from long to float
+
+                    System.out.println("myLongValue: " + myLongValue); // myLongValue: 9223372036854775807
+                    System.out.println("myFloatValue: " + myFloatValue); // myFloatValue: 9.223372E18
+                }
+            }
