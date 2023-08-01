@@ -245,6 +245,33 @@ Example (JavaScript - Case Sensitive, File System - Case Insensitive):
             developers with unexpected outcomes. By using int and double as the defaults for integer and floating-point literals, respectively, the language aims to 
             provide a more predictable experience for developers who might be accustomed to similar defaults in other programming languages.
 
+             Q9 ----------------------------------------------
+
+            In each of these conversions, the value of the smaller data type is safely and automatically converted to the larger data type. No data loss occurs if the value of
+            the source type is within the range of the target type.
+
+            The reason why these specific types are involved in implicit narrowing conversion is mainly due to the following factors:
+
+                Size and Range: 
+                The types byte, char, short, and int represent signed and unsigned integers with varying sizes and ranges. Here are their sizes and ranges:
+
+
+                byte: 8 bits, range -128 to 127
+
+                char: 16 bits, range 0 to 65,535
+
+                short: 16 bits, range -32,768 to 32,767
+
+                int: 32 bits, range -2^31 to 2^31-1
+
+
+                byte, char, and short have smaller sizes and ranges compared to int. When a value of a larger type (int) needs to be converted to a smaller type (byte, char, or short),
+                there is a possibility of data loss because the larger range of int may not fit within the smaller range of the target type. However, Java allows implicit narrowing
+                conversions only for byte, char, and short because they have a narrower range compared to int, reducing the likelihood of data loss in most common scenarios.
+
+                Safety and Error Prevention: Implicit narrowing conversions are generally more prone to potential loss of information than widening conversions. 
+                By restricting implicit narrowing to a limited set of types, Java aims to improve code safety and prevent potential bugs caused by unintended data loss.
+
 
 
 
