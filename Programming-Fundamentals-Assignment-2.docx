@@ -55,7 +55,7 @@ Example (JavaScript - Case Sensitive, File System - Case Insensitive):
 
     public class Demo2 {
     public static void main(String[] args) {
-        
+
         Object obj = "Hello, World!"; // String is a subclass of Object
         String str = (String) obj;    // Identity conversion from Object to String
 
@@ -64,5 +64,44 @@ Example (JavaScript - Case Sensitive, File System - Case Insensitive):
     }
 }
 
+	Q4 ----------------------------------------------
+
+        specific conversions on primitive types are called the widening primitive
+        conversions:
+
+        • byte to short, int, long, float, or double
+        • short to int, long, float, or double
+        • char to int, long, float, or double
+        • int to long, float, or double
+        • long to float or double
+        • float to double
+
+                               
+        byte -----> short----->int----->long
+
+        int -----> float
+        int -----> double
+        long-----> float
+        long-----> double
+        char -----> int 
+
+        A widening primitive conversion does not lose information about the overall
+        magnitude of a numeric value in the following cases, where the numeric value is
+        preserved exactly:
+
+        • from an integral type to another integral type
+        • from byte, short, or char to a floating point type
+        • from int to double
 
 
+        Example for Widening Primitive Conversion
+
+        class Test {
+            public static void main(String[] args) {
+            int big = 1234567890;
+            float approx = big;
+            System.out.println(big - (int)approx);
+            }
+        }
+
+        
