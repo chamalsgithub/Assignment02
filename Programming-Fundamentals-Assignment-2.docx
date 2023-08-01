@@ -223,3 +223,28 @@ Example (JavaScript - Case Sensitive, File System - Case Insensitive):
                     System.out.println("myFloatValue: " + myFloatValue); // myFloatValue: 9.223372E18
                 }
             }
+
+             Q8 ----------------------------------------------
+
+            Performance: 
+            On most platforms, performing arithmetic operations using int is generally faster than using other integer data types such as short or byte. Similarly, using double for 
+            floating-point operations is typically more performant than using float. By making int and double the defaults, Java aimed to prioritize the most commonly used and
+            efficient data types for arithmetic operations.
+
+            Widening and Narrowing Conversions: 
+            Java supports automatic widening conversions for integer literals. This means that if you have a small integer literal like 10, it can be assigned to an int, 
+            which is the default data type, without requiring an explicit cast. On the other hand, floating-point literals are by default treated as double because double 
+            provides a larger range and precision than float. This helps to minimize data loss and improve overall accuracy when working with floating-point numbers.
+
+            Backward Compatibility: 
+            When Java was first introduced, it was designed to be compatible with the C and C++ programming languages, which also use int for integer literals and double for floating-point 
+            literals. Keeping this default behavior allowed developers who were already familiar with C and C++ to transition more easily to Java.
+
+            Least Astonishment Principle: 
+            The Java language strives to follow the principle of least astonishment, which suggests that the language's behavior should be intuitive and not surprise 
+            developers with unexpected outcomes. By using int and double as the defaults for integer and floating-point literals, respectively, the language aims to 
+            provide a more predictable experience for developers who might be accustomed to similar defaults in other programming languages.
+
+
+
+
