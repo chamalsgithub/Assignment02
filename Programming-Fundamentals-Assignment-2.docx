@@ -150,3 +150,47 @@ Example (JavaScript - Case Sensitive, File System - Case Insensitive):
                 System.out.println("Result: " + result);
             }
         }
+
+        Q6 ----------------------------------------------
+
+        Implicit (Automatic) Narrowing Primitive Conversions:
+            Implicit narrowing conversions occur automatically by the Java compiler when a value of a larger data type is assigned to a variable of a smaller data type. 
+            These conversions are considered safe by the compiler as long as the value being assigned fits within the range of the target data type. 
+            No explicit casting (type conversion) is needed for implicit narrowing conversions.
+            
+            Example:
+
+            public class Demo5 {
+                public static void main(String[] args) {
+                    int largerValue = 1000;
+                    byte smallerValue = largerValue; // Implicit narrowing conversion from int to byte
+
+                    System.out.println("largerValue: " + largerValue);   // Output: largerValue: 1000
+                    System.out.println("smallerValue: " + smallerValue); // Output: smallerValue: -24 (data loss occurred hich is the byte representation of 1000 due to the overflow.)
+                }
+            }
+
+        Explicit Narrowing Conversions (Casting):
+            Explicit narrowing conversions, also known as casting, are performed when you manually convert a value of a larger data type to a variable of a smaller data
+            type using a cast operator. Casting is a way to tell the compiler that you are aware of the potential data loss and explicitly want to perform the conversion.
+
+            Example: 
+
+            public class Demo6 {
+                public static void main(String[] args) {
+                    double largerValue = 123.45;
+                    int smallerValue = (int) largerValue; // Explicit narrowing conversion (casting) from double to int
+
+                    System.out.println("largerValue: " + largerValue);   // Output: largerValue: 123.45
+                    System.out.println("smallerValue: " + smallerValue); // Output: smallerValue: 123 (decimal part truncated)
+                }
+            }   
+
+            Conditions for Implicit Narrowing Primitive Conversion:
+
+             For an implicit narrowing conversion to occur safely without a compile-time error, the following conditions must be met:
+
+                    * The value being assigned must fit within the range of the target data type. If the value exceeds the target data type's range, data loss may occur, 
+                    
+                    * The target data type should be smaller (in terms of the number of bits) than the source data type. This ensures that data loss, if any, will be limited 
+                    to the least significant bits.
